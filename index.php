@@ -116,14 +116,14 @@
           
            <div class="col-sm-2" style="margin-left: -5px;">
              <div id="mySidenav" class="sidenav  ">
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tneb.in/" id="tneb">TNEB LIMITED</a>
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tangedco.gov.in/" id="tangedco">TANGEDCO </a>
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tantransco.gov.in/" id="tantransco">TANTRANSCO </a>
-                            <a href="https://web.archive.org/web/20240625213755/http://teda.in/" id="kalp">TEDA </a>
+                            <a href="https://www.tnebltd.gov.in/" id="tneb">TNEB LIMITED</a>
+                            <a href="https://www.tnpdcl.org/en/tnpdcl/" id="tangedco">TANGEDCO </a>
+                            <a href="https://www.tantransco.org/en/tantransco/" id="tantransco">TANTRANSCO </a>
+                            <a href=" http://218.248.44.10:8080/" id="kalp">TEDA </a>
                             
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tnerc.gov.in/" id="dffe"> TNERC </a>
+                            <a href="https://www.tnerc.tn.gov.in/website/" id="dffe"> TNERC </a>
                             
-                            <a href="" id="dfff"> TUFIDCO  </a>
+                            <a href="http://tufidco.in/" id="dfff"> TUFIDCO  </a>
 
                         </div>
                     </div>
