@@ -17,7 +17,7 @@
                 <div class="row align-items-center">
                     <div class="col-auto pl-3">
                         <a href="https://tnebeaengineers.in/">
-                            <img src="https://web.archive.org/web/20240625213755im_/https://tnebeaengineers.in/wp-content/themes/EB2/images/tnebea_logo_cropped2.png" class="img-fluid mx-auto d-block rounded" style="height: 80px; width: auto;" alt="TNEBEA logo">
+                            <img src="./images/tnebea_logo_cropped2.png" class="img-fluid mx-auto d-block rounded" style="height: 80px; width: auto;" alt="TNEBEA logo">
                         </a>
                     </div>
                     <div class="col p-2">
@@ -28,7 +28,7 @@
             </div>
 
             <div class="col-sm-3 pt-2">
-                <form class="form-inline my-2 my-lg-0" action="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/" id="search-form" method="get">
+                <form class="form-inline my-2 my-lg-0" action="https://tnebeaengineers.in/" id="search-form" method="get">
                     <input class="form-control w-100" type="text" name="s" id="s" placeholder="Search Portal Content">
                 </form>
                 <div class="content mt-2">

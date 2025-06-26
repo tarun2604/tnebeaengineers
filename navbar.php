@@ -1,10 +1,12 @@
+
+<link rel="stylesheet" href="./styles/navbar.css">
 <nav class="navbar navbar-expand-lg  bg-primary navbar-dark p-1">
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle Navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 
 	<div class="collapse navbar-collapse text-nowrap" id="navbar-content">
-		<ul id="menu-general-info" class="navbar-nav mr-auto text-light"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-129 current_page_item active menu-item-130 nav-item nav-item"><a title="Home" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/" class="nav-link" aria-current="page">Home</a></li>
+		<ul id="menu-general-info" class="navbar-nav mr-auto text-light"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-129 current_page_item active menu-item-130 nav-item nav-item"><a title="Home" href="https://tnebeaengineers.in/" class="nav-link" aria-current="page">Home</a></li>
 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-594 nav-item nav-item"><a title="About TNEBEA" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-594">About TNEBEA</a>
 <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-594" role="menu">
 	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681 nav-item nav-item"><a title="CEC" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/cec-final/" class="dropdown-item">CEC</a></li>
@@ -23,7 +25,8 @@
 	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6921" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6921 nav-item nav-item"><a title="HEALTH CORNER -நலமுடன் வாழ்க" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/general-information-corner/health-corner-%e0%ae%a8%e0%ae%b2%e0%ae%ae%e0%af%81%e0%ae%9f%e0%ae%a9%e0%af%8d-%e0%ae%b5%e0%ae%be%e0%ae%b4%e0%af%8d%e0%ae%95/" class="dropdown-item">HEALTH CORNER -நலமுடன் வாழ்க</a></li>
 </ul>
 </li>
-<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9789" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9789 nav-item nav-item"><a title="Matrimony" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/matrimony/" class="nav-link">Matrimony</a></li>
+
+</li>
 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-563 nav-item nav-item"><a title="Minnagam" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/minnagam/" class="nav-link">Minnagam</a></li>
 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-482 nav-item nav-item"><a title="Engineers Hand Book" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/hand-book/" class="nav-link">Engineers Hand Book</a></li>
 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-4630 nav-item nav-item"><a title="Technical Corner" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-4630">Technical Corner</a>
@@ -39,7 +42,7 @@
 </ul>
 </li>
 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4628 nav-item nav-item"><a title="Grievance Forum" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/grievance-forum/" class="nav-link">Grievance Forum</a></li>
-<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589 nav-item nav-item"><a title="Contact Us" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/contact-us-final/" class="nav-link">Contact Us</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589 nav-item nav-item"><a title="Contact Us" href="./Pages/contactus.php" class="nav-link">Contact Us</a></li>
 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-8837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8837 nav-item nav-item"><a title="TNEBEA FORMS" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/forms/" class="nav-link">TNEBEA FORMS</a></li>
 </ul>
 
@@ -47,7 +50,7 @@
 
 </nav>
 
-<script>
+<!-- <script>
 document.addEventListener('DOMContentLoaded', function() {
   var navLinks = document.querySelectorAll('.navbar a, .navbar .dropdown-item');
   navLinks.forEach(function(link) {
@@ -57,4 +60,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-</script> 
+</script>  -->

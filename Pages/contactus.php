@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
 <header>
     <div class="container-fluid ">
         <div id="Header" class="row">
@@ -115,7 +116,7 @@
     </ul>
     </li>
     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4628 nav-item nav-item"><a title="Grievance Forum" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/grievance-forum/" class="nav-link">Grievance Forum</a></li>
-    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589 nav-item nav-item"><a title="Contact Us" href="./Pages/contactus.php" class="nav-link">Contact Us</a></li>
+    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589 nav-item nav-item"><a title="Contact Us" href="contactus.php" class="nav-link">Contact Us</a></li>
     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-8837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8837 nav-item nav-item"><a title="TNEBEA FORMS" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/forms/" class="nav-link">TNEBEA FORMS</a></li>
     </ul>
 
@@ -135,131 +136,101 @@
     });
     </script>  -->
 </nav>
-
+<body>
     <main>
         <div class="container-fluid">
-        <!-- Control the column width, and how they should appear on different devices -->
-        <div class="row ">
-            <div class="col-sm-7 p-2 ">
-                <div id="demo" class="carousel slide shadow-sm" data-ride="carousel" style="height: 400px; overflow: hidden;">
-
-                    <!-- Indicators -->
-                    <ul class="carousel-indicators">
-                                            <li data-target="#demo" data-slide-to="0" class="active"></li> 
-                                            <li data-target="#demo" data-slide-to="1" class=""></li> 
-                                            <li data-target="#demo" data-slide-to="2" class=""></li>
-                                            <li data-target="#demo" data-slide-to="3" class=""></li> 
-                                        </ul>
-
-                    <!-- The slideshow -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100 img-fluid mx-auto rounded" src="Images/WhatsApp Image 2025-06-12 at 08.40.24_14813da8.jpg" alt="Slider">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img class="d-block w-100 img-fluid mx-auto rounded" src="Images/WhatsApp Image 2025-06-12 at 08.40.24_d9ee6a47.jpg" alt="Slider">
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img class="d-block w-100 img-fluid mx-auto rounded" src="https://web.archive.org/web/20240625213755im_/https://tnebeaengineers.in/wp-content/uploads/2024/05/IMG-20240512-WA0050.jpg" alt="Slider">
-                            <div class="carousel-caption">
-                                <p>  Happy to share that Minnagam Structural consultancy service awarded to Anna University, CEG, Chennai, represented by Prof. Dr. Senthil.  </p>
-                            </div>
-                        </div> 
-
-                        <div class="carousel-item">
-                            <img class="d-block w-100 img-fluid mx-auto rounded" src="https://web.archive.org/web/20240625213755im_/https://tnebeaengineers.in/wp-content/uploads/2024/05/IMG-20240517-WA0084.jpg" alt="Slider">
-                            <div class="carousel-caption">
-                            </div>
-                            
-                        </div> 
-                    </div>
-
-                    <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="col-sm-5 pt-2 pl-0">
-
-                <div class="row no-gutters">
-                    <div class="col-sm-10">
-                        <div class="card shadow-sm">
-                            <h6 class="card-header text-primary">
-                                Latest Events / Updates <i class="fa fa-bullhorn" aria-hidden="true"></i>
-                            </h6>
-                            
-                            <div class="card-body marquee-container">
-                                <div class="marquee-content">
-                                    <?php
-                                        // This data can easily come from your database
-                                        $events = [
-                                            ['day' => '28', 'month' => 'May', 'title' => 'Kallakurichi Branch Meeting held at Rotary Club, Kallakurichi on 27.05.2024.', 'link' => '#'],
-                                            ['day' => '28', 'month' => 'May', 'title' => 'TTPS Branch Meeting held at Bell Hotel at Tuticorin on 27.05.2024', 'link' => '#'],
-                                            ['day' => '28', 'month' => 'May', 'title' => 'Cuddalore Branch Meeting held at Anandha Bhavan Hotel, Cuddalore on 27.05.2024.', 'link' => '#'],
-                                            ['day' => '02', 'month' => 'Sep', 'title' => 'Branch Meeting held at Salem on 02.09.2023', 'link' => '#'],
-                                            ['day' => '01', 'month' => 'Sep', 'title' => 'Villupuram Branch Meeting held on 31.08.2023', 'link' => '#'],
-                                        ];
-
-                                        // The loop generates each event item
-                                        foreach ($events as $event) {
-                                    ?>
-                                    <div class="event-item">
-                                        <div class="event-date">
-                                            <div class="day"><?= $event['day'] ?></div>
-                                            <div class="month"><?= $event['month'] ?></div>
-                                        </div>
-                                        <div class="event-details">
-                                            <a href="<?= $event['link'] ?>">
-                                                <span class="card-title text-primary"><?= $event['title'] ?></span>
-                                            </a>
-                                            <span class="badge badge-success">New</span>
-                                        </div>
-                                    </div>
-                                    <?php 
-                                        } 
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-          
-           <div class="col-sm-2" style="margin-left: -5px;">
-             <div id="mySidenav" class="sidenav  ">
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tneb.in/" id="tneb">TNEB LIMITED</a>
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tangedco.gov.in/" id="tangedco">TANGEDCO </a>
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tantransco.gov.in/" id="tantransco">TANTRANSCO </a>
-                            <a href="https://web.archive.org/web/20240625213755/http://teda.in/" id="kalp">TEDA </a>
-                            
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tnerc.gov.in/" id="dffe"> TNERC </a>
-                            
-                            <a href="" id="dfff"> TUFIDCO  </a>
-
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-sm-12 p-2">
+                    <img class="d-block w-80 mx-auto rounded" src="../Images/contactUs-1-1-300x175.jpg" alt="Contact Us">
+                    <br>
+                    <h1 class="text-center">TNEB Engineers’ Association</h1>
+                    <p class="text-center">793, Anna Salai, Chennai – 600 002. (Regn.No.217/94) (Recognised in G.O.No.854 dated 06.04.1946)</p>
+                    <p class="text-center">Ph.28133064, 28520731</p>
+                    <p class="text-center">Suggestions & Comments should reach us at :tnebea@gmail.com</p>
                     
+                    <div class="contact-details text-center">
+                        <p><strong>Email:</strong>
 
+                        </p>
+                        <p><strong>Phone:</strong> +91 12345 67890</p>
+                        <p><strong>Address:</strong> 123 TNEBEA Street, Chennai 
+                        </p>
+                    </div>
                 </div>
-
             </div>
         </div>
-
-    </div>
     </main>
+<footer>
+    <link rel="stylesheet" href="./styles/footer.css">
+    <footer class="footer-section">
+        <div class="footer-slider">
+            <div class="container">
+                <div id="basicSlider" class="ms-animating">
+                    <div class="MS-content">
+                    <div class="item" style="margin-left: -98.2243px;"> <a href="http://cea.nic.in/" target="_blank"> 
+                    <img src="../Images/footer/cea.png" alt="" class="img-fluid mx-auto d-block rounded"> </a> </div>
+                    <div class="item"> <a href="https://mnre.gov.in/" target="_blank"> 
+                    <img src="../Images/footer/mnre_0.png" alt="" class="img-fluid mx-auto d-block rounded"> </a> </div>
+                    <div class="item"> <a href="https://www.digitalindia.gov.in/" target="_blank"> 
+                    <img src="../Images/footer/digitalindia_0-1.png" alt="" class="img-fluid mx-auto d-block rounded"> </a> </div>
+                    <div class="item"> <a href="http://www.ipds.gov.in/" target="_blank"> 
+                    <img src="../Images/footer/IPDS-1.gif" alt="" class="img-fluid mx-auto d-block rounded"> </a> </div>
+                    <div class="item"> <a href="https://npp.gov.in/" target="_blank"> 
+                    <img src="../Images/footer/natportal_0.png" alt="" class="img-fluid mx-auto d-block rounded"> </a> </div>
+                    <div class="item"> <a href="http://www.powergridindia.com/" target="_blank"> 
+                    <img src="../Images/footer/powergrid_1.png" alt="" class="img-fluid mx-auto d-block rounded"> </a> </div>
+                    <div class="item"> <a href="https://www.pfcindia.com/" target="_blank"> 
+                    <img src="../Images/footer/pfcl.png" alt="" class="img-fluid mx-auto d-block rounded"> </a> </div>
+                    <div class="item"> <a href="https://powermin.nic.in/" target="_blank"> 
+                    <img src="../Images/footer/minofpower_3.png" alt="" class="img-fluid mx-auto d-block rounded"> </a> </div>
+                    <div class="item"> <a href="https://www.mygov.in/" target="_blank"> 
+                    <img src="../Images/footer/mygov_7.png" alt="" class="img-fluid mx-auto d-block rounded"> </a> </div>                </div> 
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-left text-white">
+                        <i class="fa fa-smile-o" aria-hidden="true"></i>
+                        <span class="align-text-bottom small"></span>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <span class="text-white">Copyright © TNEBEA 2024</span>
+                    </div>
+                    <div class="col-md-3 text-right footer-links">
+                        <a href="tnebeaengineers.in/tnbe-ea-privacy-policy/">Privacy Policy</a>
+                        <a href="https://tnebeaengineers.in/terms-and-conditions/">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <?php include 'footer.php'; ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Auto-scroll slider
+        const sliderContent = document.querySelector('.MS-content');
+        if (sliderContent) {
+            setInterval(() => {
+                if (!sliderContent.querySelector(':hover')) {
+                    const firstItem = sliderContent.firstElementChild;
+                    sliderContent.style.transition = 'transform 0.5s ease-in-out';
+                    sliderContent.style.transform = 'translateX(-100px)';
+                    
+                    setTimeout(() => {
+                        sliderContent.style.transition = 'none';
+                        sliderContent.style.transform = 'translateX(0)';
+                        sliderContent.appendChild(firstItem.cloneNode(true));
+                        firstItem.remove();
+                    }, 500);
+                }
+            }, 3000);
+        }
+    });
+</footer>
 
-    <script src="script.js"></script>
+    <script src="./scripts/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
