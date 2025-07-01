@@ -1,3 +1,29 @@
+<?php
+session_start();
+// Database connection
+$db_host = 'localhost';
+$db_user = 'root';
+$db_pass = '';
+$db_name = 'tnebea';
+
+$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+
+// Get carousel images
+$carousel_images = [];
+$result = $conn->query("SELECT * FROM carousel_images WHERE active = 1 ORDER BY created_at DESC LIMIT 4");
+while($row = $result->fetch_assoc()) {
+    $carousel_images[] = $row;
+}
+
+// Get events
+$events = [];
+$result = $conn->query("SELECT * FROM events WHERE active = 1 AND event_date >= CURDATE() ORDER BY event_date ASC LIMIT 5");
+while($row = $result->fetch_assoc()) {
+    $events[] = $row;
+}
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +37,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -34,7 +60,7 @@
                 <div class="row align-items-center">
                     <div class="col-auto pl-3">
                         <a href="https://tnebeaengineers.in/">
-                            <img src="../images/tnebea_logo_cropped2.png" class="img-fluid mx-auto d-block rounded" style="height: 80px; width: auto;" alt="TNEBEA logo">
+                            <img src="./images/tnebea_logo_cropped2.png" class="img-fluid mx-auto d-block rounded" style="height: 80px; width: auto;" alt="TNEBEA logo">
                         </a>
                     </div>
                     <div class="col p-2">
@@ -45,7 +71,7 @@
             </div>
 
             <div class="col-sm-3 pt-2">
-                <form class="form-inline my-2 my-lg-0" action="https://tnebeaengineers.in/" id="search-form" method="get">
+                <form class="form-inline my-2 my-lg-0" action="search.php" id="search-form" method="get">
                     <input class="form-control w-100" type="text" name="s" id="s" placeholder="Search Portal Content">
                 </form>
                 <div class="content mt-2">
@@ -82,7 +108,7 @@
             <ul id="menu-general-info" class="navbar-nav mr-auto text-light"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-129 current_page_item active menu-item-130 nav-item nav-item"><a title="Home" href="https://tnebeaengineers.in/" class="nav-link" aria-current="page">Home</a></li>
     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-594 nav-item nav-item"><a title="About TNEBEA" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-594">About TNEBEA</a>
     <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-594" role="menu">
-        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681 nav-item nav-item"><a title="CEC" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/cec-final/" class="dropdown-item">CEC</a></li>
+        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681 nav-item nav-item"><a title="CEC" href="./Pages/cec.php" class="dropdown-item">CEC</a></li>
         <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-559 nav-item nav-item"><a title="Roll of Honour" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/roll-of-honour/" class="dropdown-item">Roll of Honour</a></li>
         <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-485 nav-item nav-item"><a title="TNEBEA Branches" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/tnebea-branches/" class="dropdown-item">TNEBEA Branches</a></li>
     </ul>
@@ -100,7 +126,7 @@
     </li>
 
     </li>
-    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-563 nav-item nav-item"><a title="Minnagam" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/minnagam/" class="nav-link">Minnagam</a></li>
+    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-563 nav-item nav-item"><a title="Minnagam" href="./Pages/minnagam.php" class="nav-link">Minnagam</a></li>
     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-482 nav-item nav-item"><a title="Engineers Hand Book" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/hand-book/" class="nav-link">Engineers Hand Book</a></li>
     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-4630 nav-item nav-item"><a title="Technical Corner" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-4630">Technical Corner</a>
     <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-4630" role="menu">
@@ -117,6 +143,24 @@
     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-4628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4628 nav-item nav-item"><a title="Grievance Forum" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/grievance-forum/" class="nav-link">Grievance Forum</a></li>
     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589 nav-item nav-item"><a title="Contact Us" href="./Pages/contactus.php" class="nav-link">Contact Us</a></li>
     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-8837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8837 nav-item nav-item"><a title="TNEBEA FORMS" href="https://web.archive.org/web/20240625213755/https://tnebeaengineers.in/forms/" class="nav-link">TNEBEA FORMS</a></li>
+    <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
+            <li class="nav-item">
+                <a href="admin_dashboard.php" class="nav-link">
+                    <i class="fa fa-dashboard"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="logout.php" class="nav-link">
+                    <i class="fa fa-sign-out"></i> Logout
+                </a>
+            </li>
+        <?php else: ?>
+            <li class="nav-item">
+                <a href="login.php" class="nav-link">
+                    <i class="fa fa-sign-in"></i> Login
+                </a>
+            </li>
+        <?php endif; ?>
     </ul>
 
     </div>
@@ -138,123 +182,81 @@
 
     <main>
         <div class="container-fluid">
-        <!-- Control the column width, and how they should appear on different devices -->
-        <div class="row ">
-            <div class="col-sm-7 p-2 ">
-                <div id="demo" class="carousel slide shadow-sm" data-ride="carousel" style="height: 400px; overflow: hidden;">
-
-                    <!-- Indicators -->
-                    <ul class="carousel-indicators">
-                                            <li data-target="#demo" data-slide-to="0" class="active"></li> 
-                                            <li data-target="#demo" data-slide-to="1" class=""></li> 
-                                            <li data-target="#demo" data-slide-to="2" class=""></li>
-                                            <li data-target="#demo" data-slide-to="3" class=""></li> 
-                                        </ul>
-
-                    <!-- The slideshow -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100 img-fluid mx-auto rounded" src="Images/WhatsApp Image 2025-06-12 at 08.40.24_14813da8.jpg" alt="Slider">
-                            <div class="carousel-caption">
-                            </div>
+            <div class="row">
+                <!-- Carousel (Left) -->
+                <div class="col-md-7 p-2 d-flex flex-column">
+                    <div id="demo" class="carousel slide shadow-sm mb-3" data-ride="carousel" style="height: 400px; overflow: hidden;">
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        </ul>
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <?php foreach($carousel_images as $index => $image): ?>
+                                <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+                                    <img class="d-block w-100 img-fluid mx-auto rounded" src="<?php echo htmlspecialchars($image['image_path']); ?>" alt="Slider">
+                                    <?php if($image['caption']): ?>
+                                        <div class="carousel-caption">
+                                            <p><?php echo htmlspecialchars($image['caption']); ?></p>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
-
-                        <div class="carousel-item">
-                            <img class="d-block w-100 img-fluid mx-auto rounded" src="Images/WhatsApp Image 2025-06-12 at 08.40.24_d9ee6a47.jpg" alt="Slider">
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img class="d-block w-100 img-fluid mx-auto rounded" src="https://web.archive.org/web/20240625213755im_/https://tnebeaengineers.in/wp-content/uploads/2024/05/IMG-20240512-WA0050.jpg" alt="Slider">
-                            <div class="carousel-caption">
-                                <p>  Happy to share that Minnagam Structural consultancy service awarded to Anna University, CEG, Chennai, represented by Prof. Dr. Senthil.  </p>
-                            </div>
-                        </div> 
-
-                        <div class="carousel-item">
-                            <img class="d-block w-100 img-fluid mx-auto rounded" src="https://web.archive.org/web/20240625213755im_/https://tnebeaengineers.in/wp-content/uploads/2024/05/IMG-20240517-WA0084.jpg" alt="Slider">
-                            <div class="carousel-caption">
-                            </div>
-                            
-                        </div> 
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
                     </div>
-
-                    <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
+                    <!-- Announcement Card below carousel on small screens, beside on large screens -->
                 </div>
-            </div>
-
-
-            <div class="col-sm-5 pt-2 pl-0">
-
-                <div class="row no-gutters">
-                    <div class="col-sm-10">
-                        <div class="card shadow-sm">
-                            <h6 class="card-header text-primary">
-                                Latest Events / Updates <i class="fa fa-bullhorn" aria-hidden="true"></i>
-                            </h6>
-                            
-                            <div class="card-body marquee-container">
-                                <div class="marquee-content">
-                                    <?php
-                                        // This data can easily come from your database
-                                        $events = [
-                                            ['day' => '28', 'month' => 'May', 'title' => 'Kallakurichi Branch Meeting held at Rotary Club, Kallakurichi on 27.05.2024.', 'link' => '#'],
-                                            ['day' => '28', 'month' => 'May', 'title' => 'TTPS Branch Meeting held at Bell Hotel at Tuticorin on 27.05.2024', 'link' => '#'],
-                                            ['day' => '28', 'month' => 'May', 'title' => 'Cuddalore Branch Meeting held at Anandha Bhavan Hotel, Cuddalore on 27.05.2024.', 'link' => '#'],
-                                            ['day' => '02', 'month' => 'Sep', 'title' => 'Branch Meeting held at Salem on 02.09.2023', 'link' => '#'],
-                                            ['day' => '01', 'month' => 'Sep', 'title' => 'Villupuram Branch Meeting held on 31.08.2023', 'link' => '#'],
-                                        ];
-
-                                        // The loop generates each event item
-                                        foreach ($events as $event) {
-                                    ?>
-                                    <div class="event-item">
-                                        <div class="event-date">
-                                            <div class="day"><?= $event['day'] ?></div>
-                                            <div class="month"><?= $event['month'] ?></div>
-                                        </div>
-                                        <div class="event-details">
-                                            <a href="<?= $event['link'] ?>">
-                                                <span class="card-title text-primary"><?= $event['title'] ?></span>
-                                            </a>
-                                            <span class="badge badge-success">New</span>
-                                        </div>
+                <!-- Events & Quick Links Sidebar (Right) -->
+                <div class="col-md-5 pt-2 pl-0">
+                    <div class="row no-gutters">
+                        <div class="col-sm-10">
+                            <div class="card shadow-sm">
+                                <h6 class="card-header text-primary">
+                                    Latest Events / Updates <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                                </h6>
+                                <div class="card-body marquee-container">
+                                    <div class="marquee-content">
+                                        <?php foreach($events as $event): ?>
+                                            <div class="event-item">
+                                                <div class="event-date">
+                                                    <div class="day"><?php echo date('d', strtotime($event['event_date'])); ?></div>
+                                                    <div class="month"><?php echo date('M', strtotime($event['event_date'])); ?></div>
+                                                </div>
+                                                <div class="event-details">
+                                                    <a href="<?php echo htmlspecialchars($event['link'] ?: '#'); ?>">
+                                                        <span class="card-title text-primary"><?php echo htmlspecialchars($event['title']); ?></span>
+                                                    </a>
+                                                    <span class="badge badge-success">New</span>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
                                     </div>
-                                    <?php 
-                                        } 
-                                    ?>
                                 </div>
                             </div>
                         </div>
-                    </div>
-          
-           <div class="col-sm-2" style="margin-left: -5px;">
-             <div id="mySidenav" class="sidenav  ">
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tneb.in/" id="tneb">TNEB LIMITED</a>
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tangedco.gov.in/" id="tangedco">TANGEDCO </a>
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tantransco.gov.in/" id="tantransco">TANTRANSCO </a>
-                            <a href="https://web.archive.org/web/20240625213755/http://teda.in/" id="kalp">TEDA </a>
-                            
-                            <a href="https://web.archive.org/web/20240625213755/http://www.tnerc.gov.in/" id="dffe"> TNERC </a>
-                            
-                            <a href="" id="dfff"> TUFIDCO  </a>
-
+                        <div class="col-sm-2" style="margin-left: -5px;">
+                            <div id="mySidenav" class="sidenav">
+                                <a href="" id="FromTheBoard">FROM THE BOARD</a>
+                                <a href="" id="ToTheBoard">TO THE BOARD</a>
+                                <a href="https://www.tneb.in/" id="tneb">TNEB LIMITED</a>
+                                <a href="https://www.tangedco.gov.in/" id="tangedco">TANGEDCO </a>
+                                <a href="https://www.tantransco.gov.in/" id="tantransco">TANTRANSCO </a>
+                                <a href="https://www.teda.in/" id="kalp">TEDA </a>
+                                <a href="https://www.tnerc.gov.in/" id="dffe"> TNERC </a>
+                                <a href="https://www.tufidco.gov.in/" id="dfff"> TUFIDCO  </a>
+                            </div>
                         </div>
                     </div>
-                    
-
                 </div>
-
             </div>
         </div>
-
-    </div>
     </main>
 
     <?php include 'footer.php'; ?>
